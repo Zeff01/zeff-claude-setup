@@ -19,6 +19,6 @@
     "security",
     "performance"
   ],
-  "agents": "./agents",
-  "commands": "./commands"
+  "agents": "../agents/*.md",
+  "commands": "../commands/*.md"
 }
