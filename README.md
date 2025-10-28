@@ -110,11 +110,11 @@ Guide technology choices, architecture decisions, and implementation approaches 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/zeff-claude-setup.git ~/.claude/zeff-claude-setup
+git clone https://github.com/Zeff01/zeff-claude-setup.git ~/.claude/zeff-claude-setup
 
 # Or if you want to replace your existing setup
 cd ~/.claude
-git clone https://github.com/YOUR_USERNAME/zeff-claude-setup.git
+git clone https://github.com/Zeff01/zeff-claude-setup.git
 ```
 
 ### Use specific agents:
