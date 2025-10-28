@@ -18,7 +18,5 @@
     "full-stack",
     "security",
     "performance"
-  ],
-  "agents": "../agents/*.md",
-  "commands": "../commands/*.md"
+  ]
 }
