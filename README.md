@@ -106,23 +106,35 @@ Guide technology choices, architecture decisions, and implementation approaches 
 
 ## Installation
 
-### Clone this setup to your Claude directory:
+### Method 1: Via Claude Code Plugin Marketplace (Recommended)
+
+Add the Zeff marketplace and install the plugin:
+
+```bash
+# Add the marketplace
+/plugin marketplace add Zeff01/zeff-claude-setup
+
+# Install the plugin
+/plugin install zeff-claude-setup@zeff-marketplace
+```
+
+### Method 2: Direct GitHub Installation
+
+```bash
+# Install directly from GitHub
+/plugin install Zeff01/zeff-claude-setup
+```
+
+### Method 3: Manual Clone
 
 ```bash
 # Clone the repository
-git clone https://github.com/Zeff01/zeff-claude-setup.git ~/.claude/zeff-claude-setup
-
-# Or if you want to replace your existing setup
-cd ~/.claude
-git clone https://github.com/Zeff01/zeff-claude-setup.git
+git clone https://github.com/Zeff01/zeff-claude-setup.git ~/.claude/plugins/zeff-claude-setup
 ```
 
-### Use specific agents:
+### Verify Installation
 
-```bash
-# The agents will be automatically available in Claude Code
-# Invoke them based on your task context
-```
+After installation, the agents will be automatically available in Claude Code. They activate based on your task context.
 
 ## Usage Examples
 
@@ -159,21 +171,27 @@ User: "Review this authentication code for security issues"
 ```
 zeff-claude-setup/
 ├── README.md                              # This file
-├── CLAUDE.md                             # Global user instructions
-└── .claude/
-    └── agents/
-        ├── mobile-architect.md           # NEW: React Native specialist
-        ├── backend-architect.md          # Backend systems
-        ├── frontend-architect.md         # Web UI development
-        ├── system-architect.md           # System design
-        ├── security-engineer.md          # Security specialist
-        ├── performance-engineer.md       # Performance optimization
-        ├── refactoring-expert.md         # Code quality
-        ├── requirements-analyst.md       # Requirements gathering
-        ├── learning-guide.md             # Teaching & explanation
-        ├── technical-writer.md           # Documentation
-        ├── tech-stack-researcher.md      # Technology guidance
-        └── deep-research-agent.md        # Research specialist
+├── LICENSE                                # MIT License
+├── .claude-plugin/
+│   ├── plugin.json                       # Plugin manifest
+│   └── marketplace.json                  # Marketplace catalog
+├── agents/                               # All specialized agents
+│   ├── mobile-architect.md              # NEW: React Native specialist
+│   ├── backend-architect.md             # Backend systems
+│   ├── frontend-architect.md            # Web UI development
+│   ├── system-architect.md              # System design
+│   ├── security-engineer.md             # Security specialist
+│   ├── performance-engineer.md          # Performance optimization
+│   ├── refactoring-expert.md            # Code quality
+│   ├── requirements-analyst.md          # Requirements gathering
+│   ├── learning-guide.md                # Teaching & explanation
+│   ├── technical-writer.md              # Documentation
+│   ├── tech-stack-researcher.md         # Technology guidance
+│   └── deep-research-agent.md           # Research specialist
+└── commands/                             # Slash commands
+    ├── api/                             # API-related commands
+    ├── ui/                              # UI-related commands
+    └── misc/                            # Utility commands
 ```
 
 ## Customization
@@ -227,9 +245,33 @@ Edit `CLAUDE.md` to add project-wide instructions that apply to all agents:
 - Prefer composition over inheritance
 ```
 
+## Plugin Marketplace
+
+This repository doubles as a Claude Code plugin marketplace. Users can add it to their Claude Code instance to discover and install the agents.
+
+### For Users
+
+Add the Zeff marketplace to access all agents:
+```bash
+/plugin marketplace add Zeff01/zeff-claude-setup
+/plugin list marketplace
+```
+
+### For Developers
+
+This repository demonstrates how to create a Claude Code marketplace. Key files:
+- `.claude-plugin/plugin.json` - Plugin metadata and configuration
+- `.claude-plugin/marketplace.json` - Marketplace catalog
+- `agents/` - Agent definitions
+- `commands/` - Slash command definitions
+
 ## Contributing
 
-This is a personal setup, but feel free to fork and adapt it to your needs!
+This is a personal setup, but feel free to fork and adapt it to your needs! If you have suggestions or improvements:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
 
 ## License
 

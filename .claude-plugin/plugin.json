@@ -1,0 +1,24 @@
+{
+  "name": "zeff-claude-setup",
+  "version": "1.0.0",
+  "description": "Custom Claude Code agents for full-stack development with React Native, backend architecture, security, and performance optimization",
+  "author": {
+    "name": "Zeff",
+    "url": "https://github.com/Zeff01"
+  },
+  "homepage": "https://github.com/Zeff01/zeff-claude-setup",
+  "repository": "https://github.com/Zeff01/zeff-claude-setup",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agents",
+    "react-native",
+    "mobile-development",
+    "backend-architecture",
+    "full-stack",
+    "security",
+    "performance"
+  ],
+  "agents": "./agents",
+  "commands": "./commands"
+}

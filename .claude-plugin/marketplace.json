@@ -1,0 +1,29 @@
+{
+  "name": "zeff-marketplace",
+  "description": "Zeff's collection of specialized Claude Code agents and tools",
+  "owner": {
+    "name": "Zeff",
+    "email": "your-email@example.com"
+  },
+  "plugins": [
+    {
+      "name": "zeff-claude-setup",
+      "description": "Full-stack development agents with React Native, backend architecture, and more",
+      "source": "./",
+      "version": "1.0.0",
+      "author": {
+        "name": "Zeff",
+        "url": "https://github.com/Zeff01"
+      },
+      "keywords": [
+        "react-native",
+        "mobile-development",
+        "backend-architecture",
+        "full-stack",
+        "security",
+        "performance",
+        "agents"
+      ]
+    }
+  ]
+}
