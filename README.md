@@ -106,35 +106,45 @@ Guide technology choices, architecture decisions, and implementation approaches 
 
 ## Installation
 
-### Method 1: Via Claude Code Plugin Marketplace (Recommended)
+### Method 1: Direct Plugin Installation (Recommended)
 
-Add the Zeff marketplace and install the plugin:
+Install the plugin directly from GitHub:
+
+```bash
+/plugin install Zeff01/zeff-claude-setup
+```
+
+### Method 2: Via Marketplace
+
+Add the marketplace first, then install:
 
 ```bash
 # Add the marketplace
 /plugin marketplace add Zeff01/zeff-claude-setup
 
+# List available plugins
+/plugin list
+
 # Install the plugin
-/plugin install zeff-claude-setup@zeff-marketplace
-```
-
-### Method 2: Direct GitHub Installation
-
-```bash
-# Install directly from GitHub
-/plugin install Zeff01/zeff-claude-setup
+/plugin install zeff-claude-setup
 ```
 
 ### Method 3: Manual Clone
 
 ```bash
-# Clone the repository
+# Clone the repository to your Claude plugins directory
 git clone https://github.com/Zeff01/zeff-claude-setup.git ~/.claude/plugins/zeff-claude-setup
 ```
 
 ### Verify Installation
 
-After installation, the agents will be automatically available in Claude Code. They activate based on your task context.
+After installation, verify the plugin is installed:
+
+```bash
+/plugin list
+```
+
+The agents will be automatically available in Claude Code and activate based on your task context.
 
 ## Usage Examples
 
@@ -245,17 +255,25 @@ Edit `CLAUDE.md` to add project-wide instructions that apply to all agents:
 - Prefer composition over inheritance
 ```
 
-## Plugin Marketplace
+## Using as a Plugin
 
-This repository doubles as a Claude Code plugin marketplace. Users can add it to their Claude Code instance to discover and install the agents.
+This repository is structured as a Claude Code plugin. Users can install it to get access to all specialized agents.
 
-### For Users
+### Quick Start
 
-Add the Zeff marketplace to access all agents:
 ```bash
-/plugin marketplace add Zeff01/zeff-claude-setup
-/plugin list marketplace
+# Install the plugin
+/plugin install Zeff01/zeff-claude-setup
+
+# Verify installation
+/plugin list
 ```
+
+### Available Commands
+
+After installation, you'll have access to:
+- **13 Specialized Agents** (auto-activated based on context)
+- **Custom Slash Commands** for workflows (/api-new, /component-new, etc.)
 
 ### For Developers
 
